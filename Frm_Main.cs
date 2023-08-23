@@ -58,7 +58,9 @@ namespace SerialTestTools
                 "  设置读取到指定字符时，也是以ASCII形式输入，可以输入多个结束符，例如：13,10 \r\n\r\n" +
                 "3.常用ASCII: \r\n" +
                 "  换行\\r 对应ASCII: 13\r\n" +
-                "  回车\\n 对应ASCII: 10\r\n";
+                "  回车\\n 对应ASCII: 10\r\n\r\n" +
+                "4. 程序地址: " +
+                "https://github.com/Jlln1998/SerialPortDebugTool";
 
             //给串口对象注册接收事件。
             defaultSerialPort.DataReceived += new SerialDataReceivedEventHandler(PortDataReceive);
