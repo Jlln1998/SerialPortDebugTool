@@ -142,6 +142,19 @@ namespace SerialTestTools
         //按钮点击事件：写入命令。
         private void Btn_send_Click(object sender, EventArgs e)
         {
+            StartWriteCommand();
+        }
+
+        //命令框回车事件
+        private void Text_sendData_KeyDown(object sender, KeyEventArgs e) { 
+            if (e.KeyValue == 13) {
+                StartWriteCommand(); 
+            }
+        }
+
+        //写入命令
+        private void StartWriteCommand()
+        {
             //判断端口开启情况
             if (!defaultSerialPort.IsOpen)
             {
@@ -174,9 +187,10 @@ namespace SerialTestTools
             }
             try
             {
-                defaultSerialPort.Write(sendData);    
+                defaultSerialPort.Write(sendData);
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 AddMessageToTextBox(text_receiveData, ex.Message);
                 MessageBox.Show("数据获取失败，异常原因：" + ex.Message);
@@ -313,7 +327,7 @@ namespace SerialTestTools
         /// <param name="text">要添加的文本</param>
         private void AddMessageToTextBox(TextBox textBox,string text)
         {
-            if(textBox == text_sendHistory)
+            if(textBox.Name == "text_sendHistory")
             {
                 if (radio_sendTimeYes.Checked)
                 {
@@ -326,8 +340,7 @@ namespace SerialTestTools
                 {
                     textBox.AppendText(text + "\r\n");
                 }
-            }
-            if(textBox == text_sendHistory)
+            }else if(textBox.Name == "text_receiveData")
             {
                 if (radio_receiveTimeYes.Checked)
                 {
@@ -494,6 +507,11 @@ namespace SerialTestTools
                 label_serialPortStatus.ForeColor = Color.Red;
                 EnableChangeSerialPortSet(true);
             }
+        }
+
+        private void text_sendData_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -611,11 +611,11 @@ namespace SerialTestTools
             // 
             this.text_sendData.Location = new System.Drawing.Point(130, 163);
             this.text_sendData.Margin = new System.Windows.Forms.Padding(4);
-            this.text_sendData.Multiline = true;
             this.text_sendData.Name = "text_sendData";
-            this.text_sendData.Size = new System.Drawing.Size(336, 40);
+            this.text_sendData.Size = new System.Drawing.Size(336, 35);
             this.text_sendData.TabIndex = 2;
             this.text_sendData.WordWrap = false;
+            this.text_sendData.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Text_sendData_KeyDown);
             // 
             // group_sendSet
             // 
