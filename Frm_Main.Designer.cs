@@ -322,24 +322,24 @@ namespace SerialTestTools
             // radio_receiveTimeNo
             // 
             this.radio_receiveTimeNo.AutoSize = true;
+            this.radio_receiveTimeNo.Checked = true;
             this.radio_receiveTimeNo.Location = new System.Drawing.Point(85, 5);
             this.radio_receiveTimeNo.Margin = new System.Windows.Forms.Padding(4);
             this.radio_receiveTimeNo.Name = "radio_receiveTimeNo";
             this.radio_receiveTimeNo.Size = new System.Drawing.Size(65, 28);
             this.radio_receiveTimeNo.TabIndex = 0;
+            this.radio_receiveTimeNo.TabStop = true;
             this.radio_receiveTimeNo.Text = "否";
             this.radio_receiveTimeNo.UseVisualStyleBackColor = true;
             // 
             // radio_receiveTimeYes
             // 
             this.radio_receiveTimeYes.AutoSize = true;
-            this.radio_receiveTimeYes.Checked = true;
             this.radio_receiveTimeYes.Location = new System.Drawing.Point(15, 5);
             this.radio_receiveTimeYes.Margin = new System.Windows.Forms.Padding(4);
             this.radio_receiveTimeYes.Name = "radio_receiveTimeYes";
             this.radio_receiveTimeYes.Size = new System.Drawing.Size(65, 28);
             this.radio_receiveTimeYes.TabIndex = 0;
-            this.radio_receiveTimeYes.TabStop = true;
             this.radio_receiveTimeYes.Text = "是";
             this.radio_receiveTimeYes.UseVisualStyleBackColor = true;
             // 
@@ -355,24 +355,24 @@ namespace SerialTestTools
             // radio_showHideNo
             // 
             this.radio_showHideNo.AutoSize = true;
+            this.radio_showHideNo.Checked = true;
             this.radio_showHideNo.Location = new System.Drawing.Point(99, 10);
             this.radio_showHideNo.Margin = new System.Windows.Forms.Padding(4);
             this.radio_showHideNo.Name = "radio_showHideNo";
             this.radio_showHideNo.Size = new System.Drawing.Size(65, 28);
             this.radio_showHideNo.TabIndex = 0;
+            this.radio_showHideNo.TabStop = true;
             this.radio_showHideNo.Text = "否";
             this.radio_showHideNo.UseVisualStyleBackColor = true;
             // 
             // radio_showHideYes
             // 
             this.radio_showHideYes.AutoSize = true;
-            this.radio_showHideYes.Checked = true;
             this.radio_showHideYes.Location = new System.Drawing.Point(13, 10);
             this.radio_showHideYes.Margin = new System.Windows.Forms.Padding(4);
             this.radio_showHideYes.Name = "radio_showHideYes";
             this.radio_showHideYes.Size = new System.Drawing.Size(65, 28);
             this.radio_showHideYes.TabIndex = 0;
-            this.radio_showHideYes.TabStop = true;
             this.radio_showHideYes.Text = "是";
             this.radio_showHideYes.UseVisualStyleBackColor = true;
             // 
@@ -652,24 +652,24 @@ namespace SerialTestTools
             // radio_sendTimeNo
             // 
             this.radio_sendTimeNo.AutoSize = true;
+            this.radio_sendTimeNo.Checked = true;
             this.radio_sendTimeNo.Location = new System.Drawing.Point(85, 5);
             this.radio_sendTimeNo.Margin = new System.Windows.Forms.Padding(4);
             this.radio_sendTimeNo.Name = "radio_sendTimeNo";
             this.radio_sendTimeNo.Size = new System.Drawing.Size(65, 28);
             this.radio_sendTimeNo.TabIndex = 0;
+            this.radio_sendTimeNo.TabStop = true;
             this.radio_sendTimeNo.Text = "否";
             this.radio_sendTimeNo.UseVisualStyleBackColor = true;
             // 
             // radio_sendTimeYes
             // 
             this.radio_sendTimeYes.AutoSize = true;
-            this.radio_sendTimeYes.Checked = true;
             this.radio_sendTimeYes.Location = new System.Drawing.Point(15, 5);
             this.radio_sendTimeYes.Margin = new System.Windows.Forms.Padding(4);
             this.radio_sendTimeYes.Name = "radio_sendTimeYes";
             this.radio_sendTimeYes.Size = new System.Drawing.Size(65, 28);
             this.radio_sendTimeYes.TabIndex = 0;
-            this.radio_sendTimeYes.TabStop = true;
             this.radio_sendTimeYes.Text = "是";
             this.radio_sendTimeYes.UseVisualStyleBackColor = true;
             // 
