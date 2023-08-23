@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33801.447
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialTestTools", "SerialTestTools.csproj", "{23B58CBA-18BB-4C9C-BF80-89D3AA25DE7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23B58CBA-18BB-4C9C-BF80-89D3AA25DE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B58CBA-18BB-4C9C-BF80-89D3AA25DE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B58CBA-18BB-4C9C-BF80-89D3AA25DE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B58CBA-18BB-4C9C-BF80-89D3AA25DE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F368762C-CE3F-4B83-B2CE-B879A7293CD2}
+	EndGlobalSection
+EndGlobal
