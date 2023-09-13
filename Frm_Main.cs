@@ -206,50 +206,56 @@ namespace SerialTestTools
         /// </summary>
         public void PortDataReceive(object sender, SerialDataReceivedEventArgs e)
         {
-            if (radio_autoResYes.Checked)
+            try
             {
-                string res;
-                if (radio_receiveLine.Checked) //读取缓存区一行数据
+                if (radio_autoResYes.Checked)
                 {
-                    res = defaultSerialPort.ReadLine();
+                    string res;
+                    if (radio_receiveLine.Checked) //读取缓存区一行数据
+                    {
+                        res = defaultSerialPort.ReadLine();
 
-                }
-                else if (radio_receiveToChar.Checked) //读取缓存区到指定行的数据
-                {
-                    string endChar;
-                    try
-                    {
-                        endChar = ParseAsciiString(text_receiveTo.Text);
                     }
-                    catch
+                    else if (radio_receiveToChar.Checked) //读取缓存区到指定行的数据
                     {
-                        MessageBox.Show("【读取方式】位置设置的指定字符格式不正确，请按指定规则输入 ！！！", "错误");
-                        return;
-                    }
-                    try
-                    {
-                        res = defaultSerialPort.ReadTo(endChar);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "错误");
-                        return;
-                    }
+                        string endChar;
+                        try
+                        {
+                            endChar = ParseAsciiString(text_receiveTo.Text);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("【读取方式】位置设置的指定字符格式不正确，请按指定规则输入 ！！！", "错误");
+                            return;
+                        }
+                        try
+                        {
+                            res = defaultSerialPort.ReadTo(endChar);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "错误");
+                            return;
+                        }
 
+                    }
+                    else //读取缓存区全部数据
+                    {
+                        res = defaultSerialPort.ReadExisting();
+                    }
+                    //显示\r\n 这些不可见字符
+                    if (radio_showHideYes.Checked)
+                    {
+                        AddMessageToTextBox(text_receiveData, res.Replace("\r", "\\r").Replace("\n", "\\n"));
+                    }
+                    else
+                    {
+                        AddMessageToTextBox(text_receiveData, res);
+                    }
                 }
-                else //读取缓存区全部数据
-                {
-                    res = defaultSerialPort.ReadExisting();
-                }
-                //显示\r\n 这些不可见字符
-                if (radio_showHideYes.Checked)
-                {
-                    AddMessageToTextBox(text_receiveData, res.Replace("\r", "\\r").Replace("\n", "\\n"));
-                }
-                else
-                {
-                    AddMessageToTextBox(text_receiveData, res);
-                }
+            }
+            catch(Exception ex) {
+                AddMessageToTextBox(text_receiveData, ex.Message);
             }
         }
 
