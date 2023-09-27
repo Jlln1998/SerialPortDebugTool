@@ -42,7 +42,10 @@ namespace SerialTestTools
             comboBox_stopBits.SelectedIndex = 1;//默认停止位     StopBits.one。
 
             //初始化串口默认数据
-            defaultSerialPort.PortName = comboBox_serialName.Items.Count > 0 ? (String)comboBox_serialName.Items[0] : "";
+            if (comboBox_serialName.Items.Count > 0)
+            {
+                defaultSerialPort.PortName = (String)comboBox_serialName.Items[0];
+            }
             defaultSerialPort.BaudRate = Convert.ToInt32(comboBox_baudRate.Text);   //波特率。
             defaultSerialPort.DataBits = Convert.ToInt32(comboBox_dataBits.Text);   //数据位。
             defaultSerialPort.Parity = (Parity)comboBox_parity.SelectedItem;        //奇偶校验位。
